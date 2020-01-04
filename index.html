@@ -5,41 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <style type="text/css" media="all">
-nav {
-  width: 200px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-nav > a {
-  grid-row: 1;
-}
-nav > a.menu{
-  grid-column: 1;
-}
-nav > a.view{
-  grid-column: 2;
-}
-nav > a.settings{
-  grid-column: 3;
-}
+      nav {
+        width: 200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      nav > a {
+        grid-row: 1;
+      }
+      nav > a.menu{
+        grid-column: 1;
+      }
+      nav > a.view{
+        grid-column: 2;
+      }
+      nav > a.settings{
+        grid-column: 3;
+      }
 
-#menu:not(:target) {
-  display: none;
-}
-#view:not(:target) {
-  display: none;
-}
-#settings:not(:target) {
-  display: none;
-}
-#settings:not(:target) + #view:not(:target) + #menu:not(:target) {
-  display: block;
-}
+      #menu:not(:target) {
+        display: none;
+      }
+      #view:not(:target) {
+        display: none;
+      }
+      #settings:not(:target) {
+        display: none;
+      }
+      #settings:not(:target) + #view:not(:target) + #menu:not(:target) {
+        display: block;
+      }
     </style>
     <title>CSS only tabs</title>
   </head>
+
   <body>
-    <div class="tab" id="settings">
+    <div id="settings">
       <nav>
         <a class="settings" href="#settings"><b>Settings</b></a>
         <a class="view" href="#view">View</a>
@@ -49,7 +50,7 @@ nav > a.settings{
       settings
     </div>
 
-    <div class="tab" id="view">
+    <div id="view">
       <nav>
         <a class="settings" href="#settings">Settings</a>
         <a class="view" href="#view"><b>View</b></a>
@@ -59,7 +60,7 @@ nav > a.settings{
       view
     </div>
 
-    <div class="tab" id="menu">
+    <div id="menu">
       <nav>
         <a class="settings" href="#settings">Settings</a>
         <a class="view" href="#view">View</a>
